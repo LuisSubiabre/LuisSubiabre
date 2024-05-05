@@ -5,7 +5,7 @@
 
 ### Tecnologías con las que trabajo actualmente:
 
-![My Skills](https://skillicons.dev/icons?i=js,html,css,php,python,bootstrap,mysql,wordpress,git,github,unreal,blender)
+![My Skills](https://skillicons.dev/icons?i=js,html,css,php,python,cpp,bootstrap,mysql,wordpress,git,github,unreal,blender,arduino)
 
 
 ### Redes Sociales:
