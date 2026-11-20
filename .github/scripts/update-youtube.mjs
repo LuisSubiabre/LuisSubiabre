@@ -73,18 +73,59 @@ async function findChannelId() {
   );
 }
 
-async function getVideos(channelId) {
-  const feed = await fetchText(
-    `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`
-  );
-  const entries = feed.match(/<entry>[\s\S]*?<\/entry>/g) || [];
-  return entries
-    .slice(0, MAX_VIDEOS)
+const parseFeed = (feed) =>
+  (feed.match(/<entry>[\s\S]*?<\/entry>/g) || [])
     .map((e) => ({
       id: (e.match(/<yt:videoId>([^<]+)<\/yt:videoId>/) || [])[1],
       title: decode((e.match(/<title>([\s\S]*?)<\/title>/) || [, ""])[1]).trim(),
     }))
     .filter((v) => v.id);
+
+// Un Short responde 200 en /shorts/ID; un video normal redirige a /watch.
+export let isShort = async (id) => {
+  try {
+    const res = await fetch(`https://www.youtube.com/shorts/${id}`, {
+      method: "HEAD",
+      headers: HEADERS,
+      redirect: "manual",
+    });
+    return res.status === 200;
+  } catch {
+    return false;
+  }
+};
+export const setIsShort = (fn) => (isShort = fn);
+
+async function getVideos(channelId) {
+  // 1) Lista de subidas "solo videos largos" del canal (UULF...), sin Shorts.
+  try {
+    const playlistId = "UULF" + channelId.slice(2);
+    const videos = parseFeed(
+      await fetchText(`https://www.youtube.com/feeds/videos.xml?playlist_id=${playlistId}`)
+    );
+    if (videos.length) {
+      console.log("Usando la lista de videos largos (sin Shorts)");
+      return videos.slice(0, MAX_VIDEOS);
+    }
+  } catch (err) {
+    console.log(`No se pudo leer la lista de videos largos: ${err.message}`);
+  }
+
+  // 2) Respaldo: feed completo del canal, descartando los Shorts uno a uno.
+  console.log("Usando el feed del canal y filtrando Shorts");
+  const all = parseFeed(
+    await fetchText(`https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`)
+  );
+  const videos = [];
+  for (const v of all) {
+    if (videos.length >= MAX_VIDEOS) break;
+    if (await isShort(v.id)) {
+      console.log(`Short omitido: ${v.title}`);
+      continue;
+    }
+    videos.push(v);
+  }
+  return videos;
 }
 
 function render(videos) {
