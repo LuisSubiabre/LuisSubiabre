@@ -3,7 +3,7 @@
 # Hola 👋, soy Luis Subiabre
 
 <a href="https://github.com/LuisSubiabre">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3500&pause=800&color=38BDF8&center=true&vCenter=true&width=600&lines=Full+Stack+Web+Developer;React+%E2%80%A2+TypeScript+%E2%80%A2+PHP+%E2%80%A2+Python;Creo+contenido+en+YouTube+%F0%9F%8E%A5" alt="Full Stack Web Developer" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3500&pause=800&color=38BDF8&center=true&vCenter=true&width=600&lines=Full+Stack+Web+Developer;React+%E2%80%A2+TypeScript+%E2%80%A2+Node.js+%E2%80%A2+PHP;Creo+contenido+en+YouTube+%F0%9F%8E%A5" alt="Full Stack Web Developer" />
 </a>
 
 <p>
@@ -20,7 +20,7 @@
 ### 🧑‍💻 Sobre mí
 
 - 🌐 Desarrollador **Full Stack** enfocado en crear aplicaciones web modernas, rápidas y fáciles de usar.
-- ⚛️ Trabajo principalmente con **React + TypeScript** en el frontend y **PHP / Python** en el backend.
+- ⚛️ Trabajo principalmente con **React + TypeScript** en el frontend y **Node.js (Express) y PHP** en el backend.
 - 🎥 Comparto lo que aprendo en mi canal de **[YouTube](https://www.youtube.com/luissubiabre)**.
 - 📫 Puedes contactarme por **[LinkedIn](https://www.linkedin.com/in/luissubiabre/)**.
 
@@ -36,7 +36,7 @@
 
 **Backend y bases de datos**
 
-<img src="https://skillicons.dev/icons?i=php,python,mysql,postgresql,wordpress&perline=8" alt="Backend" />
+<img src="https://skillicons.dev/icons?i=nodejs,express,php,mysql,postgresql,wordpress&perline=8" alt="Backend" />
 
 **Herramientas**
 

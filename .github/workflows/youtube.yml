@@ -7,7 +7,7 @@ on:
   push:
     branches: [main]
     paths:
-      - ".github/scripts/update_youtube.py"
+      - ".github/scripts/update-youtube.mjs"
       - ".github/workflows/youtube.yml"
 
 permissions:
@@ -19,9 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
+          node-version: "20"
 
       - name: Actualizar README
         env:
@@ -29,7 +29,7 @@ jobs:
           # Opcional: pega aquí el ID de tu canal (empieza con "UC") si la detección automática falla
           YOUTUBE_CHANNEL_ID: ""
           MAX_VIDEOS: "4"
-        run: python .github/scripts/update_youtube.py
+        run: node .github/scripts/update-youtube.mjs
 
       - name: Guardar cambios
         run: |
