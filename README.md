@@ -52,22 +52,22 @@
 <table align="center">
   <tr>
     <td align="center" width="50%">
-      <a href="https://www.youtube.com/watch?v=yldOgSiv5vQ"><img src="https://i.ytimg.com/vi/yldOgSiv5vQ/hqdefault.jpg" alt="Camera2D en Godot 4" width="100%" /></a>
-      <br/><sub><b>Camera2D en Godot 4</b></sub>
-    </td>
-    <td align="center" width="50%">
       <a href="https://www.youtube.com/watch?v=I-aborfsVdY"><img src="https://i.ytimg.com/vi/I-aborfsVdY/hqdefault.jpg" alt="13 - Cámara 2D en Godot 4: seguir al jugador, zoom, límites y suavizado" width="100%" /></a>
       <br/><sub><b>13 - Cámara 2D en Godot 4: seguir al jugador, zoom, límites y suavizado</b></sub>
     </td>
-  </tr>
-  <tr>
     <td align="center" width="50%">
       <a href="https://www.youtube.com/watch?v=kFghRddji6s"><img src="https://i.ytimg.com/vi/kFghRddji6s/hqdefault.jpg" alt="12 - AnimatedSprite2D en Godot: Animaciones y corrección de giro" width="100%" /></a>
       <br/><sub><b>12 - AnimatedSprite2D en Godot: Animaciones y corrección de giro</b></sub>
     </td>
+  </tr>
+  <tr>
     <td align="center" width="50%">
       <a href="https://www.youtube.com/watch?v=4S-tfV3Wezc"><img src="https://i.ytimg.com/vi/4S-tfV3Wezc/hqdefault.jpg" alt="11 - Cómo hacer un SALTO profesional en GODOT" width="100%" /></a>
       <br/><sub><b>11 - Cómo hacer un SALTO profesional en GODOT</b></sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="https://www.youtube.com/watch?v=erobAUavt_k"><img src="https://i.ytimg.com/vi/erobAUavt_k/hqdefault.jpg" alt="10 - Area2D y Signals (señales) en Godot 4" width="100%" /></a>
+      <br/><sub><b>10 - Area2D y Signals (señales) en Godot 4</b></sub>
     </td>
   </tr>
 </table>
